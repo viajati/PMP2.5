@@ -13,6 +13,7 @@
       "backgroundColor": "#0c0d11"
     },
     "ios": {
+      "bundleIdentifier": "com.viajati.taiwanpollution",
       "jsEngine": "hermes",
       "supportsTablet": true,
       "infoPlist": {
@@ -20,8 +21,10 @@
         "NSLocationAlwaysAndWhenInUseUsageDescription": "Required to maintain your complete 24/7 pollution map even when the app is in the background.",
         "NSCameraUsageDescription": "Allows you to scan telemetry QR codes to sync data between devices.",
         "UIBackgroundModes": [
+          "location",
           "location"
-        ]
+        ],
+        "ITSAppUsesNonExemptEncryption": false
       }
     },
     "android": {
@@ -40,6 +43,11 @@
     "plugins": [
       "expo-web-browser",
       "expo-notifications"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "e8ae9bd5-fbeb-4413-8545-c83be6757fad"
+      }
+    }
   }
 }
